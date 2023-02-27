@@ -44,10 +44,10 @@ function showWeather(response) {
   console.log(response);
   let currentCity = document.querySelector("#current-city");
   let currentTemperature = document.querySelector("#current-temperature");
-  let weatherDetail = document.querySelector("#description");
+  let description = document.querySelector("#description");
   currentCity.innerHTML = response.data.name;
   currentTemperature.innerHTML = Math.round(response.data.main.temp);
-  weatherDetail.innerHTML = response.data.weather[0].main;
+  description.innerHTML = response.data.weather[0].main;
 }
 
 function searchCity(event) {
