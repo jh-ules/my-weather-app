@@ -1,0 +1,119 @@
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+ul {
+  list-style: none;
+  margin-bottom: 45px;
+  font-family: "Source Code Pro", monospace;
+  font-size: 13px;
+}
+
+li {
+  display: inline;
+}
+
+h1 {
+  letter-spacing: 3px;
+}
+
+h6 {
+  font-weight: bold;
+}
+
+.weather-app {
+  margin: 25px auto;
+  color: #272143;
+  border: 1px solid #272143;
+  border-radius: 5px;
+}
+
+.date-time {
+  font-size: 12px;
+  font-family: "Source Code Pro", monospace;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+
+.bi-sunrise,
+.bi-sunset {
+  font-size: 20px;
+  vertical-align: sub;
+}
+
+.sunrise-sunset {
+  font-size: 12px;
+  margin-bottom: 25px;
+  padding: 10px;
+}
+
+.current-city {
+  text-align: center;
+  padding: 15px;
+  margin: 25px auto;
+}
+
+.current-weather {
+  font-family: "Source Code Pro", monospace;
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.units {
+  font-size: 20px;
+  vertical-align: middle;
+}
+
+.current-icon {
+  font-size: 55px;
+  padding: 20px;
+}
+
+.detail {
+  font-size: 20px;
+  font-weight: bold;
+  vertical-align: text-top;
+  position: relative;
+  right: 25px;
+}
+
+.weather-forecast {
+  text-align: center;
+  font-family: "Source Code Pro", monospace;
+  padding: 25px;
+}
+
+.forecast-icon {
+  font-size: 28px;
+}
+
+.card {
+  margin: 10px auto;
+  border: 1px solid #272143;
+}
+
+.search-city {
+  text-align: center;
+  margin: 15px auto;
+}
+
+.search {
+  border: 1px solid #272143;
+}
+
+.quote {
+  font-family: "Open Sans", sans-serif;
+  font-size: 12px;
+  padding: 25px;
+  color: #272143;
+}
+
+.button {
+  background-color: #272143;
+  border-radius: 3px;
+  border: 1px solid #272143;
+  color: white;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+}
