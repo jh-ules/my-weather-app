@@ -71,8 +71,17 @@ h6 {
 
 .units {
   font-size: 20px;
-  vertical-align: middle;
+  padding: 10px;
 }
+
+/*.active {
+  color: #272143;
+  cursor: default;
+}
+
+.active:hover {
+  text-decoration: none;
+}*/
 
 .detail {
   font-size: 18px;

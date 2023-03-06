@@ -40,7 +40,13 @@
             </div>
             <div class="current-weather">
               <span class="temperature" id="current-temperature"> 12</span
-              ><span id="units">°C</span><br />
+              ><span class="units" id="temperature-unit">
+                <a href="#" id="celsius" class="active">°C</a>/<a
+                  href="#"
+                  id="fahrenheit"
+                  >°F</a
+                ></span
+              ><br />
               <img
                 src="http://openweathermap.org/img/wn/01d@2x.png"
                 alt="weather icon"
@@ -73,9 +79,6 @@
                 class="search-button"
                 title="Search entered city"
               />
-              <button class="current-location-button" title="not working yet">
-                📌
-              </button>
             </form>
           </div>
         </div>

@@ -64,6 +64,9 @@ function showWeather(response) {
   let sunrise = document.querySelector("#sunrise");
   let sunset = document.querySelector("#sunset");
   let currentIcon = document.querySelector("#current-icon");
+
+  celsiusTemperature = Math.round(response.data.main.temp);
+
   currentCity.innerHTML = response.data.name;
   country.innerHTML = response.data.sys.country;
   currentTemperature.innerHTML = Math.round(response.data.main.temp);
@@ -87,5 +90,26 @@ function searchCity(event) {
   axios.get(apiUrl).then(showWeather);
 }
 
+function displayFahrenheit(event) {
+  event.preventDefault();
+  let currentTemperature = document.querySelector("#current-temperature");
+  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+  currentTemperature.innerHTML = Math.round(fahrenheitTemperature);
+}
+
+function displayCelsius(event) {
+  event.preventDefault();
+  let currentTemperature = document.querySelector("#current-temperature");
+  currentTemperature.innerHTML = Math.round(celsiusTemperature);
+}
+
+let celsiusTemperature = null;
+
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", searchCity);
+
+let fahrenheit = document.querySelector("#fahrenheit");
+fahrenheit.addEventListener("click", displayFahrenheit);
+
+let celsius = document.querySelector("#celsius");
+celsius.addEventListener("click", displayCelsius);
