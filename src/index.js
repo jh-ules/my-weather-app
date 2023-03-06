@@ -57,9 +57,15 @@ function showWeather(response) {
   let wind = document.querySelector("#wind-speed");
   let sunrise = document.querySelector("#sunrise");
   let sunset = document.querySelector("#sunset");
+  let currentIcon = document.querySelector("#current-icon");
   currentCity.innerHTML = response.data.name;
   country.innerHTML = response.data.sys.country;
   currentTemperature.innerHTML = Math.round(response.data.main.temp);
+  currentIcon.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  currentIcon.setAttribute("alt", response.data.weather[0].description);
   description.innerHTML = response.data.weather[0].description;
   humidity.innerHTML = response.data.main.humidity;
   wind.innerHTML = Math.round(response.data.wind.speed * 3.6);
