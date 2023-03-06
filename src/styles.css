@@ -4,7 +4,8 @@ body {
 
 ul {
   list-style: none;
-  margin-bottom: 45px;
+  margin-bottom: 25px;
+  padding: 0;
   font-family: "Source Code Pro", monospace;
   font-size: 13px;
 }
@@ -26,6 +27,7 @@ h6 {
   color: #272143;
   border: 1px solid #272143;
   border-radius: 5px;
+  max-width: 1000px;
 }
 
 .date-time {
@@ -44,7 +46,6 @@ h6 {
 .sunrise-sunset {
   font-size: 12px;
   margin-bottom: 25px;
-  padding: 10px;
 }
 
 .current-city {
@@ -53,9 +54,13 @@ h6 {
   margin: 25px auto;
 }
 
+.country {
+  font-size: 27px;
+}
+
 .current-weather {
   font-family: "Source Code Pro", monospace;
-  font-size: 40px;
+  font-size: 30px;
   font-weight: bold;
   margin-bottom: 15px;
 }
@@ -81,7 +86,7 @@ h6 {
 .weather-forecast {
   text-align: center;
   font-family: "Source Code Pro", monospace;
-  padding: 25px;
+  padding: 75px;
 }
 
 .forecast-icon {
@@ -91,11 +96,6 @@ h6 {
 .card {
   margin: 10px auto;
   border: 1px solid #272143;
-}
-
-.search-city {
-  text-align: center;
-  margin: 15px auto;
 }
 
 .search {
@@ -109,17 +109,15 @@ h6 {
   color: #272143;
 }
 
-.button {
+.search-button,
+.current-location-button {
   background-color: #272143;
   border-radius: 3px;
   border: 1px solid #272143;
-  color: white;
-  font-family: "Open Sans", sans-serif;
-  font-weight: 300;
 }
 
 .credits {
-  font-family: "Source Code Pro", monospace;
-  font-size: 12px;
-  text-align: center;
+  font-family: "Open Sans", sans-serif;
+  font-size: 10px;
+  text-align: right;
 }

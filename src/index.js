@@ -37,24 +37,41 @@ let months = [
 let month = months[now.getMonth()];
 let year = now.getFullYear();
 
-let currentTime = document.querySelector("#current-day");
+let currentTime = document.querySelector("#current-date");
 currentTime.innerHTML = `${weekday}, ${date} ${month} ${year}, ${hours}:${minutes}`;
+
+function formatDate(timestamp) {
+  let date = new Date(timestamp);
+  let hours = date.getHours();
+  let minutes = date.getMinutes();
+  return `${hours}:${minutes}`;
+}
 
 function showWeather(response) {
   console.log(response);
   let currentCity = document.querySelector("#current-city");
+  let country = document.querySelector("#country");
   let currentTemperature = document.querySelector("#current-temperature");
   let description = document.querySelector("#description");
+  let humidity = document.querySelector("#current-humidity");
+  let wind = document.querySelector("#wind-speed");
+  let sunrise = document.querySelector("#sunrise");
+  let sunset = document.querySelector("#sunset");
   currentCity.innerHTML = response.data.name;
+  country.innerHTML = response.data.sys.country;
   currentTemperature.innerHTML = Math.round(response.data.main.temp);
-  description.innerHTML = response.data.weather[0].main;
+  description.innerHTML = response.data.weather[0].description;
+  humidity.innerHTML = response.data.main.humidity;
+  wind.innerHTML = Math.round(response.data.wind.speed * 3.6);
+  sunrise.innerHTML = formatDate(response.data.sys.sunrise * 1000);
+  sunset.innerHTML = formatDate(response.data.sys.sunset * 1000);
 }
 
 function searchCity(event) {
   event.preventDefault();
   let apiKey = "210d99196a88b9257ed8cb3535a0a0c5";
   let city = document.querySelector("#city-input").value;
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  let apiUrl = `https:api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(showWeather);
 }
 

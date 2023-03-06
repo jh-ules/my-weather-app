@@ -30,9 +30,13 @@
       <div class="row">
         <div class="col-5">
           <div class="current-city">
-            <h1 id="current-city">Berlin</h1>
-            <div class="date-time" id="current-day">
-              Monday,<span id="current-time">11:00</span>
+            <h1>
+              <span id="current-city">Berlin</span>
+              <span class="country" id="country">DE</span>
+            </h1>
+            <div class="date-time">
+              last update:
+              <span id="current-date">Monday, 6 March 2023, 11:00</span>
             </div>
             <div class="current-weather">
               <span class="temperature" id="current-temperature"> 12</span
@@ -40,15 +44,15 @@
               <i class="bi bi-cloud-rain-fill current-icon"></i>
               <span class="detail" id="description">rain</span>
             </div>
-            <div class="sunrise-sunset">
-              <i class="bi bi-sunrise"></i> 8:42 <i class="bi bi-sunset"></i>
-              16:54
-            </div>
             <ul>
-              <li id="current-precipitation">Precipitation: 50% |</li>
-              <li id="current-humidity">Humidity: 2% |</li>
-              <li id="current-Wind">Wind: 5 km/h</li>
+              <li>Humidity: <span id="current-humidity">2</span>% |</li>
+              <li>Wind: <span id="wind-speed">5 </span> km/h</li>
             </ul>
+            <div class="sunrise-sunset">
+              <i class="bi bi-sunrise"></i><span id="sunrise"> 8:42 </span
+              ><i class="bi bi-sunset"></i>
+              <span id="sunset"> 16:54 </span>
+            </div>
             <form class="search-city" id="search-form">
               <input
                 type="search"
@@ -58,7 +62,18 @@
                 required
                 autocomplete="off"
               />
-              <input type="submit" value="Search" class="button" />
+              <input
+                type="submit"
+                value="🔎"
+                class="search-button"
+                title="Search entered city"
+              />
+              <button
+                class="current-location-button"
+                title="Set your current location"
+              >
+                📌
+              </button>
             </form>
           </div>
         </div>
@@ -119,23 +134,12 @@
               </div>
             </div>
           </div>
-          <p class="quote">
-            <em
-              >Sunshine is delicious, rain is refreshing, wind braces us up,
-              snow is exhilarating;<br />
-              there is really no such thing as bad weather, only different kinds
-              of good weather.
-            </em>
-            <br />
-            - John Ruskin
-            <br />
-          </p>
         </div>
-        <span class="credits">
+        <small class="credits">
           <a href="https://github.com/jh-ules/my-weather-app" target="_blank"
             >Open-source code</a
           >
-          by Julia Hercher 🙂</span
+          by Julia Hercher</small
         >
       </div>
     </div>
