@@ -79,19 +79,13 @@ function showWeather(response) {
   sunset.innerHTML = formatDate(response.data.sys.sunset * 1000);
 }
 
-function searchCity(city) {
+function searchCity(event) {
+  event.preventDefault();
   let apiKey = "210d99196a88b9257ed8cb3535a0a0c5";
-  let apiUrl = `https:api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  let city = document.querySelector("#city-input").value;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(showWeather);
 }
 
-function handleSubmit(event) {
-  event.preventDefault();
-  let city = document.querySelector("#city-input");
-  searchCity(city.value);
-}
-
-searchCity("Berlin");
-
 let searchForm = document.querySelector("#search-form");
-searchForm.addEventListener("submit", handleSubmit);
+searchForm.addEventListener("submit", searchCity);
