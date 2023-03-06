@@ -48,6 +48,10 @@ h6 {
   margin-bottom: 25px;
 }
 
+.set {
+  margin-left: 15px;
+}
+
 .current-city {
   text-align: center;
   padding: 15px;
