@@ -69,7 +69,7 @@ function showWeather(response) {
   currentTemperature.innerHTML = Math.round(response.data.main.temp);
   currentIcon.setAttribute(
     "src",
-    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   currentIcon.setAttribute("alt", response.data.weather[0].description);
   description.innerHTML = response.data.weather[0].description;
