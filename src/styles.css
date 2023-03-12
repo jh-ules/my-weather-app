@@ -18,8 +18,9 @@ h1 {
   letter-spacing: 3px;
 }
 
-h6 {
-  font-weight: bold;
+h5 {
+  text-align: left;
+  font-family: "Open Sans", sans-serif;
 }
 
 .weather-app {
@@ -27,7 +28,7 @@ h6 {
   color: #272143;
   border: 1px solid #272143;
   border-radius: 5px;
-  max-width: 1000px;
+  width: 1000px;
 }
 
 .date-time {
@@ -48,14 +49,11 @@ h6 {
   margin-bottom: 25px;
 }
 
-.set {
-  margin-left: 15px;
-}
-
 .current-city {
   text-align: center;
-  padding: 15px;
+  padding: 20px;
   margin: 25px auto;
+  border-right: 1px solid #272143;
 }
 
 .country {
@@ -71,26 +69,28 @@ h6 {
 
 .units {
   font-size: 20px;
-  padding: 10px;
+  font-weight: 600;
 }
 
-/*.active {
-  color: #272143;
-  cursor: default;
+.current-icon {
+  font-size: 55px;
+  padding: 20px;
 }
-
-.active:hover {
-  text-decoration: none;
-}*/
 
 .detail {
-  font-size: 18px;
+  font-size: 20px;
+  font-weight: bold;
+  vertical-align: text-top;
+  position: relative;
+  right: 25px;
 }
 
 .weather-forecast {
   text-align: center;
   font-family: "Source Code Pro", monospace;
-  padding: 75px;
+  color: #272143;
+  padding: 40px;
+  margin-top: 30px;
 }
 
 .forecast-icon {
@@ -104,24 +104,18 @@ h6 {
 
 .search {
   border: 1px solid #272143;
-}
-
-.quote {
-  font-family: "Open Sans", sans-serif;
-  font-size: 12px;
-  padding: 25px;
-  color: #272143;
+  border-radius: 3px;
 }
 
 .search-button,
 .current-location-button {
   background-color: #272143;
   border-radius: 3px;
-  border: 1px solid #272143;
 }
 
 .credits {
   font-family: "Open Sans", sans-serif;
+  color: #272143;
   font-size: 10px;
-  text-align: right;
+  margin-top: 20px;
 }
