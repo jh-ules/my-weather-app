@@ -18,9 +18,9 @@ h1 {
   letter-spacing: 3px;
 }
 
-h5 {
-  text-align: left;
-  font-family: "Open Sans", sans-serif;
+h6 {
+  font-family: "Source Code Pro", monospace;
+  font-weight: bold;
 }
 
 .weather-app {
@@ -28,7 +28,7 @@ h5 {
   color: #272143;
   border: 1px solid #272143;
   border-radius: 5px;
-  width: 1000px;
+  width: 950px;
 }
 
 .date-time {
@@ -36,17 +36,6 @@ h5 {
   font-family: "Source Code Pro", monospace;
   font-weight: 300;
   margin-bottom: 20px;
-}
-
-.bi-sunrise,
-.bi-sunset {
-  font-size: 20px;
-  vertical-align: sub;
-}
-
-.sunrise-sunset {
-  font-size: 12px;
-  margin-bottom: 25px;
 }
 
 .current-city {
@@ -72,6 +61,11 @@ h5 {
   font-weight: 600;
 }
 
+.active {
+  color: #272143;
+  cursor: default;
+}
+
 .current-icon {
   font-size: 55px;
   padding: 20px;
@@ -84,21 +78,20 @@ h5 {
   right: 25px;
 }
 
-.weather-forecast {
-  text-align: center;
-  font-family: "Source Code Pro", monospace;
-  color: #272143;
-  padding: 40px;
-  margin-top: 30px;
+.bi-sunrise,
+.bi-sunset {
+  font-size: 20px;
+  vertical-align: sub;
+  margin-right: 5px;
 }
 
-.forecast-icon {
-  font-size: 28px;
+.bi-sunset {
+  margin-left: 15px;
 }
 
-.card {
-  margin: 10px auto;
-  border: 1px solid #272143;
+.sunrise-sunset {
+  font-size: 12px;
+  margin-bottom: 25px;
 }
 
 .search {
@@ -112,14 +105,22 @@ h5 {
   border-radius: 3px;
 }
 
+.weather-forecast {
+  text-align: center;
+  font-family: "Source Code Pro", monospace;
+  color: #272143;
+  padding: 40px;
+  margin-top: 30px;
+}
+
+.card {
+  margin: 10px auto;
+  border: 1px solid #272143;
+}
+
 .credits {
   font-family: "Open Sans", sans-serif;
   color: #272143;
   font-size: 10px;
   margin-top: 20px;
-}
-
-.active {
-  color: #272143;
-  cursor: default;
 }
