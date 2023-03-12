@@ -38,20 +38,26 @@
               <span id="current-date">Monday, 6 March 2023, 11:00</span>
             </div>
             <div class="current-weather">
-              <img
-                src="http://openweathermap.org/img/wn/01d@2x.png"
-                alt="weather icon"
-                id="current-icon"
-              />
-              <span class="detail" id="description">sunny</span><br />
-              <span class="temperature" id="current-temperature"> 12</span>
-              <span id="temperature-unit" class="units">
-                <a href="#" class="text-decoration-none active" id="celsius"
-                  >°C</a
-                >/<a href="#" class="text-decoration-none" id="fahrenheit"
-                  >°F</a
-                >
-              </span>
+              <div class="row">
+                <div class="col-6">
+                  <img
+                    src="http://openweathermap.org/img/wn/01d@2x.png"
+                    alt="weather icon"
+                    id="current-icon"
+                  />
+                </div>
+                <div class="col-6 temp-description">
+                  <span class="temperature" id="current-temperature">12</span>
+                  <span id="temperature-unit" class="units">
+                    <a href="#" class="text-decoration-none active" id="celsius"
+                      >°C</a
+                    >/<a href="#" class="text-decoration-none" id="fahrenheit"
+                      >°F</a
+                    >
+                  </span>
+                  <br /><span class="detail" id="description">sunny</span><br />
+                </div>
+              </div>
             </div>
             <ul>
               <li>Humidity: <span id="current-humidity">2</span>% |</li>

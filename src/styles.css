@@ -13,21 +13,16 @@ li {
   display: inline;
 }
 
-h1 {
-  letter-spacing: 3px;
-}
-
 h6 {
   font-weight: bold;
 }
 
 .weather-app {
-  margin: 25px auto;
+  margin: 40px auto;
   color: #272143;
   border: 1px solid #272143;
   border-radius: 5px;
   width: 950px;
-  box-shadow: 3px 3px 3px #272143;
 }
 
 .date-time {
@@ -53,9 +48,10 @@ h6 {
   margin-bottom: 15px;
 }
 
+.temperature,
+.detail,
 .units {
-  font-size: 20px;
-  font-weight: 600;
+  font-size: 10px;
 }
 
 .active {
@@ -66,13 +62,6 @@ h6 {
 .current-icon {
   font-size: 55px;
   padding: 20px;
-}
-
-.detail {
-  font-size: 13px;
-  vertical-align: middle;
-  position: relative;
-  right: 25px;
 }
 
 .bi-sunrise,
