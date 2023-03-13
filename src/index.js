@@ -102,15 +102,12 @@ function displayForecast(response) {
 }
 
 function getForecast(coordinates) {
-  console.log(coordinates);
   let apiKey = "210d99196a88b9257ed8cb3535a0a0c5";
   let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
-  console.log(apiUrl);
   axios.get(apiUrl).then(displayForecast);
 }
 
 function showWeather(response) {
-  console.log(response);
   let currentCity = document.querySelector("#current-city");
   let country = document.querySelector("#country");
   let currentTemperature = document.querySelector("#current-temperature");
