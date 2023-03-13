@@ -91,7 +91,7 @@ h6 {
 
 .search {
   border: 1px solid #272143;
-  border-radius: 5px;
+  border-radius: 3px;
   box-shadow: rgba(39, 33, 67, 0.2) 3px 3px;
   font-size: 13px;
   font-family: "Open Sans", sans-serif;
@@ -100,7 +100,8 @@ h6 {
 .search-button,
 .current-location-button {
   background-color: #272143;
-  border-radius: 5px;
+  border: 1px solid #272143;
+  border-radius: 3px;
   box-shadow: rgba(39, 33, 67, 0.2) 3px 3px;
   font-size: 13px;
 }
