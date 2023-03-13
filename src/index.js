@@ -53,7 +53,8 @@ function formatDate(timestamp) {
   return `${hours}:${minutes}`;
 }
 
-function displayForecast() {
+function displayForecast(response) {
+  console.log(response.data.daily);
   let forecastElement = document.querySelector("#forecast");
 
   let days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
@@ -66,7 +67,7 @@ function displayForecast() {
          <div class="forecast">
            <h6>${day}</h6>
            <div class="weather-forecast-temperature">
-             <span class="forecast-temperature-max">11°</span>/
+             <span class="forecast-temperature-max">11°</span>
              <span class="forecast-temperature-min">4°</span>
            </div>
            <img
@@ -82,6 +83,14 @@ function displayForecast() {
 
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
+}
+
+function getForecast(coordinates) {
+  console.log(coordinates);
+  let apiKey = "210d99196a88b9257ed8cb3535a0a0c5";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  console.log(apiUrl);
+  axios.get(apiUrl).then(displayForecast);
 }
 
 function showWeather(response) {
@@ -101,16 +110,18 @@ function showWeather(response) {
   currentCity.innerHTML = response.data.name;
   country.innerHTML = response.data.sys.country;
   currentTemperature.innerHTML = Math.round(response.data.main.temp);
-  currentIcon.setAttribute(
-    "src",
-    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
-  );
-  currentIcon.setAttribute("alt", response.data.weather[0].description);
   description.innerHTML = response.data.weather[0].description;
   humidity.innerHTML = response.data.main.humidity;
   wind.innerHTML = Math.round(response.data.wind.speed * 3.6);
   sunrise.innerHTML = formatDate(response.data.sys.sunrise * 1000);
   sunset.innerHTML = formatDate(response.data.sys.sunset * 1000);
+  currentIcon.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  currentIcon.setAttribute("alt", response.data.weather[0].description);
+
+  getForecast(response.data.coord);
 }
 
 function searchCity(city) {
@@ -154,4 +165,3 @@ let celsius = document.querySelector("#celsius");
 celsius.addEventListener("click", displayCelsius);
 
 searchCity("Berlin");
-displayForecast();
