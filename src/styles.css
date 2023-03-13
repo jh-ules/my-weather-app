@@ -23,6 +23,10 @@ h6 {
   border: 1px solid #272143;
   border-radius: 5px;
   width: 950px;
+  background: linear-gradient(to top, #dad4ec 0%, #dad4ec 1%, #f3e7e9 100%);
+  box-shadow: rgba(39, 33, 67, 0.4) 5px 5px, rgba(39, 33, 67, 0.3) 10px 10px,
+    rgba(39, 33, 67, 0.2) 15px 15px, rgba(39, 33, 67, 0.1) 20px 20px,
+    rgba(39, 33, 67, 0.05) 25px 25px;
 }
 
 .date-time {
