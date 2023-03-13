@@ -44,12 +44,15 @@
                     src="http://openweathermap.org/img/wn/01d@2x.png"
                     alt="weather icon"
                     id="current-icon"
+                    class="current-icon"
                   />
                 </div>
                 <div class="col-6 temp-description">
-                  <span class="temperature" id="current-temperature">12</span>
-                  <span id="temperature-unit" class="units">°C</span>
-                  <br /><span class="detail" id="description">sunny</span><br />
+                  <div>
+                    <span class="temperature" id="current-temperature">12</span
+                    ><span id="temperature-unit" class="units">°C</span>
+                    <div class="detail" id="description">sunny</div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -65,7 +68,7 @@
               <input
                 type="search"
                 id="city-input"
-                placeholder="Enter a city"
+                placeholder="Enter your city here"
                 class="search"
                 autocomplete="off"
               />
@@ -78,24 +81,25 @@
               <button
                 class="current-location-button"
                 title="Set your current location"
+                id="current-location-btn"
               >
-                📌
+                📍
               </button>
             </form>
           </div>
         </div>
         <div class="col-7 weather-forecast" id="forecast"></div>
+        <small class="credits">
+          <a
+            href="https://github.com/jh-ules/my-weather-app"
+            target="_blank"
+            class="text-decoration-none"
+            >Open-source code</a
+          >
+          by Julia Hercher</small
+        >
       </div>
     </div>
-    <small class="credits">
-      <a
-        href="https://github.com/jh-ules/my-weather-app"
-        target="_blank"
-        class="text-decoration-none"
-        >Open-source code</a
-      >
-      by Julia Hercher</small
-    >
     <script type="text/javascript" src="src/index.js"></script>
   </body>
 </html>

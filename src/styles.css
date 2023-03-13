@@ -4,7 +4,7 @@ body {
 
 ul {
   list-style: none;
-  margin-bottom: 25px;
+  margin: 20px auto;
   padding: 0;
   font-size: 13px;
 }
@@ -46,26 +46,31 @@ h6 {
   font-size: 27px;
 }
 
-.current-weather {
+/*.current-weather {
   font-size: 30px;
   font-weight: 400;
   margin-bottom: 15px;
-}
+}*/
 
 .temperature,
-.detail,
 .units {
-  font-size: 10px;
+  font-size: 30px;
+  font-weight: 600;
+  position: relative;
+  left: -40px;
+  top: 16px;
 }
 
-.active {
-  color: #272143;
-  cursor: default;
+.detail {
+  font-size: 13px;
+  position: relative;
+  left: -39px;
+  top: 15px;
 }
 
 .current-icon {
-  font-size: 55px;
-  padding: 20px;
+  position: relative;
+  right: -38px;
 }
 
 .bi-sunrise,
@@ -86,13 +91,18 @@ h6 {
 
 .search {
   border: 1px solid #272143;
-  border-radius: 3px;
+  border-radius: 5px;
+  box-shadow: rgba(39, 33, 67, 0.2) 3px 3px;
+  font-size: 13px;
+  font-family: "Open Sans", sans-serif;
 }
 
 .search-button,
 .current-location-button {
   background-color: #272143;
-  border-radius: 3px;
+  border-radius: 5px;
+  box-shadow: rgba(39, 33, 67, 0.2) 3px 3px;
+  font-size: 13px;
 }
 
 .weather-forecast {
@@ -100,7 +110,16 @@ h6 {
   text-align: center;
   color: #272143;
   padding: 40px;
-  margin-top: 30px;
+  margin: 12px auto;
+}
+
+.forecast {
+  margin: 10px auto;
+  padding: 20px;
+  border: 1px solid #272143;
+  border-radius: 5px;
+  box-shadow: rgba(39, 33, 67, 0.5) 3px 3px;
+  background: #fff;
 }
 
 .forecast-temperature-min {
@@ -111,5 +130,5 @@ h6 {
   font-family: "Open Sans", sans-serif;
   color: #272143;
   font-size: 10px;
-  margin-top: 20px;
+  text-align: right;
 }

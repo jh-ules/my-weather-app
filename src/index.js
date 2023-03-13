@@ -88,7 +88,7 @@ function displayForecast(response) {
                forecastDay.weather[0].icon
              }@2x.png"
              alt="weather icon"
-             width="46"
+             width="60"
              id="forecast-icon"
            />
          </div>
@@ -148,6 +148,20 @@ function handleSubmit(event) {
   let city = document.querySelector("#city-input");
   searchCity(city.value);
 }
+
+function searchLocation(position) {
+  let apiKey = "210d99196a88b9257ed8cb3535a0a0c5";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(showWeather);
+}
+
+function getCurrentLocation(event) {
+  event.preventDefault();
+  navigator.geolocation.getCurrentPosition(searchLocation);
+}
+
+let currentLocationButton = document.querySelector("#current-location-btn");
+currentLocationButton.addEventListener("click", getCurrentLocation);
 
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", handleSubmit);
